@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Project</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" @click="currentPage = 'home'">Home</a></li>
+        <li><a href="#" @click="currentPage = 'contact'">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <home-page v-if="currentPage === 'home'"></home-page>
+    <contact-page v-if="currentPage === 'contact'"></contact-page>
+  </div>
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
